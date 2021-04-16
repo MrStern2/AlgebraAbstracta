@@ -1,0 +1,91 @@
+
+  #include <iostream>
+  using std::cout;
+  using std::endl;
+  using std::cin;
+  #include <string>
+  using std::string;
+  #include <sstream>
+  using std::istringstream;
+  
+ 
+  int main() {
+
+//parte 1
+//ingrese por teclado una cadena de caracteres
+
+  string entrada( "intente analizar mas profundamente los mensajes recibidos" );
+std::cout<<endl;
+  cout<<"ingresa un numero para separar la frase ";
+string separacion;
+
+//ingrese por teclado el numero de caracteres que tendra cada bloque
+int numero;
+std::cin>>numero;
+int init = 0;
+int end = 0;
+
+
+
+    for (int f = 0; f < numero; f++)
+    {
+        cout << entrada.at(f)<<"-";
+    }
+    cout << entrada;
+  
+
+std::cout<<endl;
+while( end = entrada.find(" ", init), end >= 0 )
+{
+  std::cout << entrada.substr(init, end - init) << '\n';
+  init = end + 1;
+}
+std::cout << entrada.substr(init);
+std::cout<<endl;
+
+
+   for (int f = 0; f < numero; f++)
+    {
+        cout <<entrada.substr(init).at(f)<<"-";
+    }
+    cout << entrada;
+  
+
+std::cout<<endl;
+std::cout<<endl;
+/*//lo que busco es que cada palabra se separe en 3 caracteres asi que un bool que diga si cumple o no cumple , hay muchas opciones y formas pero no me alcanza el tiempo
+bool analizador;
+if (size){
+entrada.substr(init)
+  
+}
+
+
+ */
+
+
+//pregunta 2 Ingrese una cadena de texto que contenga números y convierta ese string en enteros: 
+    //Declaracion 
+    string numeros;
+std::cout<<endl;
+    //pide 
+    cout << "¿cual es el numero?" << endl;
+    cin >> numeros;
+    int abece;
+   abece=atoi(numeros.c_str());
+  cout <<abece;
+
+std::cout<<endl;
+//pregunta 3 convertir una variable numerica en un string 
+
+std::cout<<endl;
+int variablenum =1234;
+std::string to_string( int variablenum() );
+cout<<variablenum;
+
+std::cout<<endl;
+
+
+  
+  } // fin de main
+ 
